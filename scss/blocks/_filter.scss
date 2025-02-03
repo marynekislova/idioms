@@ -1,0 +1,44 @@
+.filter {
+  &__container {
+    position: fixed;
+  }
+}
+.dropdown {
+  display: flex;
+}
+.btn {
+  backdrop-filter: blur(2px) saturate(80%);
+  background-color: rgba(180, 248, 200, 0.51);
+  color: black;
+  border: none;
+}
+.btn-secondary {
+}
+.dropdown-toggle {
+  &:hover {
+    backdrop-filter: blur(2px) saturate(80%);
+    background-color: rgba(180, 248, 200, 0.61);
+    color: black;
+    border: none;
+  }
+  &.show {
+    backdrop-filter: blur(3px) saturate(80%);
+    background-color: rgba(123, 247, 160, 0.51);
+    color: black;
+    border: none;
+  }
+}
+.dropdown-menu {
+    &.show {
+        backdrop-filter: blur(2px) saturate(80%);
+        background-color: rgba(180, 248, 200, 0.51);
+        color: black;
+        border: none;
+      }
+}
+.dropdown-item {
+  &:hover {
+    background-color: rgba(86, 94, 100, 0.75);
+    color: #fff;
+  }
+}
