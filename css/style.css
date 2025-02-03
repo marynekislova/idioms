@@ -93,7 +93,7 @@ h6 {
 }
 
 .filter__container {
-  position: fixed;
+  position: relative;
 }
 
 .dropdown {
@@ -103,6 +103,8 @@ h6 {
 }
 
 .btn {
+  position: fixed;
+  z-index: 20;
   -webkit-backdrop-filter: blur(2px) saturate(80%);
           backdrop-filter: blur(2px) saturate(80%);
   background-color: rgba(180, 248, 200, 0.51);
@@ -169,7 +171,9 @@ h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+  gap: 30px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 .cards__item {
   display: -webkit-box;
@@ -179,47 +183,48 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   line-height: 2;
-  background-color: rgb(251, 224, 180);
-  border: 1px solid rgba(142, 123, 93, 0.51);
   border-radius: 10px;
   padding: 10px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  cursor: pointer;
 }
-
-.flipped {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+.cards__item.flipped {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.cards__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid rgba(142, 123, 93, 0.51);
 }
 
 .front {
-  z-index: 1;
-  position: relative;
-  background-color: cyan;
-  height: 100%;
-  text-align: center;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  background-color: rgb(249, 170, 139);
 }
 
 .back {
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: orange;
+  background-color: khaki;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
 }/*# sourceMappingURL=style.css.map */

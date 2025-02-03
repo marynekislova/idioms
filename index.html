@@ -46,7 +46,7 @@
                   <a class="dropdown-item" data-filter="time" href="#">Время</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" data-filter="feelings" href="#"
+                  <a class="dropdown-item" data-filter="appearance" href="#"
                     >Внешность и характер</a
                   >
                 </li>
@@ -66,23 +66,24 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" data-filter="" href="#"
-                    >Что-то еще здесь</a
+                  <a class="dropdown-item" data-filter="food" href="#"
+                    >Идиомы, связанные с едой</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" data-filter="" href="#"
-                    >Что-то еще здесь</a
+                  <a class="dropdown-item" data-filter="body-parts" href="#"
+                    >Идиомы, связанные с частями тела</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" data-filter="" href="#"
-                    >Что-то еще здесь</a
+                  <a class="dropdown-item" data-filter="cloth" href="#"
+                    >Идиомы, связанные с одеждой</a
                   >
                 </li>
+
                 <li>
-                  <a class="dropdown-item" data-filter="" href="#"
-                    >Что-то еще здесь</a
+                  <a class="dropdown-item" data-filter="color" href="#"
+                    >Идиомы, связанные с цветом</a
                   >
                 </li>
                 <li>
@@ -105,24 +106,42 @@
         <div class="cards">
           <div class="cards__container">
             <div class="cards__items">
-              <div class="cards__item front">123</div>
-              <div class="cards__item back">321</div>
-
               <div class="cards__item">
-                Throw in the towel [θrəʊ ɪn ðə ˈtaʊəl] — сдаться, признать
-                поражение
+                <div class="cards__face front">123</div>
+                <div class="cards__face back">321</div>
               </div>
               <div class="cards__item">
-                Walking on thin ice [ˈwɔːkɪŋ ɒn θɪn aɪs] — ходить по тонкому
-                льду, быть в рискованной ситуации
+                <div class="cards__face front">
+                  Throw in the towel [θrəʊ ɪn ðə ˈtaʊəl]
+                </div>
+                <div class="cards__face back">
+                  — сдаться, признать поражение
+                </div>
+              </div>
+              <div class="cards__item">
+                <div class="cards__face front">123</div>
+                <div class="cards__face back">321</div>
               </div>
             </div>
           </div>
         </div>
         <!-- end cards -->
+
+        <!-- idiom list -->
+         <div class="idioms-list">
+            <div class="idioms-list__container">
+              <div class="idioms-list__items">
+                <!-- idioms -->
+              </div>
+            </div>
+          </div>
+        <!-- end idiom list -->
+
+        <!-- end content -->
       </div>
     </div>
 
+    <!-- script -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
       integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
@@ -136,6 +155,6 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

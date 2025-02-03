@@ -1,12 +1,14 @@
 .filter {
   &__container {
-    position: fixed;
+    position: relative;
   }
 }
 .dropdown {
   display: flex;
 }
 .btn {
+  position: fixed;
+  z-index: 20;
   backdrop-filter: blur(2px) saturate(80%);
   background-color: rgba(180, 248, 200, 0.51);
   color: black;
@@ -29,12 +31,12 @@
   }
 }
 .dropdown-menu {
-    &.show {
-        backdrop-filter: blur(2px) saturate(80%);
-        background-color: rgba(180, 248, 200, 0.51);
-        color: black;
-        border: none;
-      }
+  &.show {
+    backdrop-filter: blur(2px) saturate(80%);
+    background-color: rgba(180, 248, 200, 0.51);
+    color: black;
+    border: none;
+  }
 }
 .dropdown-item {
   &:hover {

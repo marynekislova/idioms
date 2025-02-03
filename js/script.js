@@ -1,12 +1,25 @@
-"use strict";
+import idiomsEng300 from "./idiomsEng_data.js";
 
-const cardFont = document.querySelector(".front");
-const cardBack = document.querySelector(".back");
-console.log(cardItem);
+document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
 
-function flipCard() {
-  function onCardClick() {
+  // function flipCard(card) {
+  //   card.classList.toggle('flipped');
+  // }
 
+  document.querySelectorAll(".cards__item").forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
+
+  // Function to display a random idiom
+  function getRandomIdiom() {
+    const randomIndex = Math.floor(Math.random() * idiomsEng300.length);
+    const randomIdiom = idiomsEng300[randomIndex];
   }
-  cardFont.addEventListener("click", onCardMove);
-}
+
+  // Call the function to display a random idiom
+  getRandomIdiom();
+
+});
