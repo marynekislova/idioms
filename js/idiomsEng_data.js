@@ -1948,43 +1948,45 @@ const idiomsEng300 = [
   },
 ];
 
-// function addKey(arr) {
-//   arr.forEach((item) => {
-//     item.category = "";
-//     if (item.categoryRu === "Финансовые идиомы") {
-//       item.category = "Finances";
-//     }
-//     if (item.categoryRu === "Время") {
-//       item.category = "time";
-//     }
-//     if (item.categoryRu === "Внешность и характер") {
-//       item.category = "appearance";
-//     }
-//     if (item.categoryRu === "Чувства, эмоции, отношения") {
-//       item.category = "feelings";
-//     }
-//     if (item.categoryRu === "Поведение, поступки") {
-//       item.category = "behavior";
-//     }
-//     if (item.categoryRu === "Идиомы, связанные с животными") {
-//       item.category = "animals";
-//     }
-//     if (item.categoryRu === "Идиомы, связанные с едой") {
-//       item.category = "food";
-//     }
-//     if (item.categoryRu === "Идиомы, связанные с частями тела") {
-//       item.category = "body-parts";
-//     }
-//     if (item.categoryRu === "Идиомы, связанные с одеждой") {
-//       item.category = "cloth";
-//     }
-//     if (item.categoryRu === "Идиомы, связанные с цветом") {
-//       item.category = "color";
-//     }
-//   });
-// }
+function addKey(arr) {
+  arr.forEach((item) => {
+    item.category = "";
+    if (item.categoryRu === "Финансовые идиомы") {
+      item.category = "Finances";
+    }
+    if (item.categoryRu === "Время") {
+      item.category = "time";
+    }
+    if (item.categoryRu === "Внешность и характер") {
+      item.category = "appearance";
+    }
+    if (item.categoryRu === "Чувства, эмоции, отношения") {
+      item.category = "feelings";
+    }
+    if (item.categoryRu === "Поведение, поступки") {
+      item.category = "behavior";
+    }
+    if (item.categoryRu === "Идиомы, связанные с животными") {
+      item.category = "animals";
+    }
+    if (item.categoryRu === "Идиомы, связанные с едой") {
+      item.category = "food";
+    }
+    if (item.categoryRu === "Идиомы, связанные с частями тела") {
+      item.category = "body-parts";
+    }
+    if (item.categoryRu === "Идиомы, связанные с одеждой") {
+      item.category = "cloth";
+    }
+    if (item.categoryRu === "Идиомы, связанные с цветом") {
+      item.category = "color";
+    }
+  });
+}
 
 addKey(idiomsEng300);
 console.log(idiomsEng300);
 
+
 export default idiomsEng300;
+
